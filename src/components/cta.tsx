@@ -166,7 +166,7 @@ const CTA = () => {
                     htmlFor="message"
                     className="block text-sm font-medium text-gray-700 mb-2"
                   >
-                    Message *
+                    Message
                   </label>
                   <Textarea
                     id="message"
@@ -185,12 +185,14 @@ const CTA = () => {
                     className="w-4 h-4 mr-2"
                     checked={formData.terms}
                     onCheckedChange={(checked: boolean) =>
-                        setFormData({ ...formData, terms: checked})
+                      setFormData({ ...formData, terms: checked })
                     }
                     name="terms"
                   />
                   <label htmlFor="terms" className="text-sm text-gray-700">
-                    I agree to the{" "}
+                    By clicking this I agree to receive SMS from Tapservices.
+                    You can reply STOP to opt-out at any time. Tapservices will
+                    use the data provided in accordance with{" "}
                     <a
                       href="/terms"
                       className="text-orange-500 hover:text-orange-600"

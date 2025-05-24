@@ -1,5 +1,3 @@
-import { Button } from "@/components/ui/button";
-
 const About = () => {
   return (
     <section id="about" className="py-20 bg-white">

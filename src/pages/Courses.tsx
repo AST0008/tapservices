@@ -1,5 +1,4 @@
 "use client";
-import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Navbar from "@/components/navbar";
 import CTA from "@/components/cta";
@@ -81,26 +80,23 @@ const Courses = () => {
               Enroll Now For The Training
             </h3>
 
-            <div className="flex justify-center">
-         
-          </div>
+            <div className="flex justify-center"></div>
 
             <p className="mb-8 max-w-xl text-gray-700">
               Contact us by using this simple form and we will guide you further
             </p>
-
           </div>
 
           {/* Image next to the text */}
           <img
-              src="/truck3.jpeg"
-              alt="DOT Supervisor Training"
-              className="rounded-lg shadow-lg max-w-full h-auto object-cover"
-              style={{ maxHeight: "400px", width: "100%" }}
-            />
+            src="/truck3.jpeg"
+            alt="DOT Supervisor Training"
+            className="rounded-lg shadow-lg max-w-full h-auto object-cover"
+            style={{ maxHeight: "400px", width: "100%" }}
+          />
         </motion.section>
-        
-            <CTA />
+
+        <CTA />
       </div>
 
       <Footer />

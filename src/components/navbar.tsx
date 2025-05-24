@@ -5,14 +5,12 @@ import { cn } from "@/lib/utils";
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > 0);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -27,32 +25,107 @@ const Navbar = () => {
       )}
     >
       <nav className="container flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <a href="/" className="text-2xl font-bold text-gray-400">
+        {/* Logo */}
+        <div className="flex items-center">
+          <a href="/" className="text-2xl flex gap-2 font-bold text-gray-400">
+            {scrolled ? (
+              <img src="/logo-black.png" height={10} width={80} />
+            ) : (
+              <img src="/logo.png" height={10} width={80} />
+            )}
             <span className="text-orange-500">Tap</span>services
           </a>
         </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center text-red-500 gap-8">
-          <a href="#about" className={cn("nav-link", scrolled ? "text-gray-600": "text-gray-200")}>
-            About
+        <div className="hidden lg:flex items-center text-red-500 gap-8 relative">
+          <a
+            href="/aboutus"
+            className={cn(
+              "nav-link",
+              scrolled ? "text-gray-600" : "text-gray-200"
+            )}
+          >
+            About Us
           </a>
-          <a href="#services" className={cn("nav-link", scrolled ? "text-gray-600": "text-gray-200")}>
-            Services
+          <a
+            href="/courses"
+            className={cn(
+              "nav-link",
+              scrolled ? "text-gray-600" : "text-gray-200"
+            )}
+          >
+            Courses
           </a>
-          <a href="#statistics" className={cn("nav-link", scrolled ? "text-gray-600": "text-gray-200")}>
-            Statistics
-          </a>
-          <a href="#testimonials" className={cn("nav-link", scrolled ? "text-gray-600": "text-gray-200")}>
-            Testimonials
-          </a>
-          <a href="#news" className={cn("nav-link", scrolled ? "text-gray-600": "text-gray-200")}>
-            News
-          </a>
-          <a href="#contact" className={cn("nav-link", scrolled ? "text-gray-600": "text-gray-200")}>
-            Contact
-          </a>
+
+          {/* Services Dropdown */}
+          <div className="relative">
+            <button
+              onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
+              className={cn(
+                "nav-link flex items-center gap-1",
+                scrolled ? "text-gray-600" : "text-gray-200"
+              )}
+            >
+              Services
+              <svg
+                className="w-4 h-4 ml-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+
+            {servicesDropdownOpen && (
+              <div className="absolute top-full left-0 mt-2 w-60 bg-white border rounded shadow-md z-50">
+                <a
+                  href="/open-new-trucking-company"
+                  className="block px-4 py-2 hover:bg-gray-100 text-gray-800"
+                >
+                  Open New Trucking Company
+                </a>
+                <a
+                  href="/manage-trucking-permits"
+                  className="block px-4 py-2 hover:bg-gray-100 text-gray-800"
+                >
+                  Manage Trucking Permits
+                </a>
+                <a
+                  href="/dot-drug-and-alcohol-testing"
+                  className="block px-4 py-2 hover:bg-gray-100 text-gray-800"
+                >
+                  DOT Drug and Alcohol Testing
+                </a>
+                <a
+                  href="/dot-audit-support"
+                  className="block px-4 py-2 hover:bg-gray-100 text-gray-800"
+                >
+                  DOT Audit Support
+                </a>
+                <a
+                  href="/dot-clearinghouse"
+                  className="block px-4 py-2 hover:bg-gray-100 text-gray-800"
+                >
+                  DOT Clearing House
+                </a>
+                <a
+                  href="/ifta-fuel-tax-return"
+                  className="block px-4 py-2 hover:bg-gray-100 text-gray-800"
+                >
+                  IFTA Fue Tax
+                </a>
+                <a
+                  href="/oregon-truck-permits"
+                  className="block px-4 py-2 hover:bg-gray-100 text-gray-800"
+                >
+                  Oregon Truck Permits
+                </a>
+              </div>
+            )}
+          </div>
+
           <Button className="bg-orange-500 hover:bg-orange-600 text-white rounded-full">
             Get Started
           </Button>
@@ -105,13 +178,55 @@ const Navbar = () => {
         )}
       >
         <div className="container flex flex-col gap-4">
-          <a href="#about" className="nav-link">
+          <a href="/aboutus" className="nav-link">
             About
           </a>
-          <a href="#services" className="nav-link">
-            Services
+          <a href="/courses" className="nav-link">
+            Courses
           </a>
-          <a href="#statistics" className="nav-link">
+
+          {/* Mobile Services Toggle */}
+          <button
+            onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+            className="flex items-center justify-between px-4 text-left"
+          >
+            <span className="nav-link">Services</span>
+            <svg
+              className="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          {mobileServicesOpen && (
+            <div className="ml-4 flex flex-col gap-2">
+              <a href="/open-new-trucking-company" className="text-gray-800">
+                Open New Trucking Company
+              </a>
+              <a href="/manage-trucking-permits" className="text-gray-800">
+                Manage Trucking Permits
+              </a>
+              <a href="/dot-drug-and-alcohol-testing" className="text-gray-800">
+                DOT Drug and Alcohol Testing
+              </a>
+              <a href="/dot-audit-support" className="text-gray-800">
+                DOT Audit Support
+              </a>
+              <a href="/dot-clearinghouse" className="text-gray-800">
+                DOT Clearing House
+              </a>
+              <a href="/ifta-fuel-tax-return" className="text-gray-800">
+                IFTA Fue Tax
+              </a>
+              <a href="/oregon-truck-permits" className="text-gray-800">
+                Oregon Truck Permits
+              </a>
+            </div>
+          )}
+
+          {/* <a href="#statistics" className="nav-link">
             Statistics
           </a>
           <a href="#testimonials" className="nav-link">
@@ -122,7 +237,8 @@ const Navbar = () => {
           </a>
           <a href="#contact" className="nav-link">
             Contact
-          </a>
+          </a> */}
+
           <Button className="bg-orange-500 hover:bg-orange-600 text-white rounded-full w-full">
             Get Started
           </Button>

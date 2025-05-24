@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
@@ -7,20 +6,33 @@ const Hero = () => {
       <div className="container px-4 mx-auto">
         <div className="flex flex-col lg:flex-row items-center">
           {/* Left Content */}
-          <div className="w-full lg:w-1/2 mb-12 lg:mb-0 lg:pr-10 opacity-0 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            <h1 className="text-4xl text-gray-300 md:text-5xl lg:text-6xl font-bold leading-tight mb-6 ">
-              Nationwide Trucking Permits Made <span className="text-orange-500">Easy</span>
+          <div
+            className="w-full lg:w-1/2 mb-12 lg:mb-0 lg:pr-10 animate-fade-in opacity-0"
+            style={{ animationDelay: "0.2s" }}
+          >
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-gray-100 mb-6 tracking-tight">
+              Nationwide Trucking Permits Made{" "}
+              <span className="text-orange-500">Easy</span>
             </h1>
-            <p className="text-xl text-gray-400 mb-8">
-              Helping over 5000 truckers stay compliant for 10+ years.
+
+            <p className="text-lg md:text-xl text-gray-400 mb-8 leading-relaxed max-w-xl">
+              Empowering over{" "}
+              <span className="font-semibold text-white">5000+</span> truckers
+              to stay compliant for more than a decade with fast, reliable
+              permit services.
             </p>
+
             <div className="flex flex-wrap gap-4">
-              <Button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-6 rounded-xl font-semibold text-lg">
+              <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-4 rounded-lg font-semibold text-base shadow-lg hover:shadow-xl transition duration-300">
                 Get Started
               </Button>
-              <Button variant="outline" className="border-orange-500 text-orange-500 hover:bg-orange-50 px-8 py-6 rounded-xl font-semibold text-lg">
+
+              <a
+                href="#contact"
+                className="border border-orange-500 text-orange-500 hover:bg-orange-50 px-6 py-4 rounded-lg font-semibold text-base transition duration-300"
+              >
                 Contact Us
-              </Button>
+              </a>
             </div>
           </div>
 
@@ -95,8 +107,15 @@ const Hero = () => {
             </div>
           </div> */}
 
-          <div className="w-full lg:w-1/2 opacity-0 animate-scale-in" style={{ animationDelay: '0.6s' }}>
-            <img src="/trucks-hero.png" alt="About Us" className="w-full h-full object-cover rounded-2xl" />
+          <div
+            className="w-full lg:w-1/2 opacity-0 animate-scale-in"
+            style={{ animationDelay: "0.6s" }}
+          >
+            <img
+              src="/trucks-hero.png"
+              alt="About Us"
+              className="w-full h-full object-cover rounded-2xl"
+            />
           </div>
         </div>
       </div>

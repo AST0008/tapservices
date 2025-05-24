@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Navbar from "@/components/navbar";
 import CTA from "@/components/cta";
