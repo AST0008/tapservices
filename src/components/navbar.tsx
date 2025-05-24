@@ -28,7 +28,7 @@ const Navbar = () => {
     >
       <nav className="container flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <a href="#" className="text-2xl font-bold text-gray-400">
+          <a href="/" className="text-2xl font-bold text-gray-400">
             <span className="text-orange-500">Tap</span>services
           </a>
         </div>
