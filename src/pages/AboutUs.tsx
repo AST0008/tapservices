@@ -228,13 +228,13 @@ const AboutPage = () => {
                   img: "/images/himanshu.jpg",
                 },
                 {
-                  name: "Kevin Mash",
+                  name: "Rajesh Bharadwaj",
                   role: "Head Operations",
                   img: "/images/kevin.jpg",
                 },
                 {
-                  name: "Mike Douglas",
-                  role: "Support Lead",
+                  name: "Neeraj Singh",
+                  role: "Branch Head",
                   img: "/images/mike.jpg",
                 },
               ].map((member, i) => (

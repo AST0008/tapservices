@@ -23,9 +23,9 @@ const Hero = () => {
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-4 rounded-lg font-semibold text-base shadow-lg hover:shadow-xl transition duration-300">
+              {/* <Button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-4 rounded-lg font-semibold text-base shadow-lg hover:shadow-xl transition duration-300">
                 Get Started
-              </Button>
+              </Button> */}
 
               <a
                 href="#contact"

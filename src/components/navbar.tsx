@@ -33,12 +33,21 @@ const Navbar = () => {
             ) : (
               <img src="/logo.png" height={10} width={80} />
             )}
-            <span className="text-orange-500">Tap</span>services
+            <span className="text-orange-500">Tap</span>services Inc.
           </a>
         </div>
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center text-red-500 gap-8 relative">
+          <a
+            href="/"
+            className={cn(
+              "nav-link",
+              scrolled ? "text-gray-600" : "text-gray-200"
+            )}
+          >
+            Home
+          </a>
           <a
             href="/aboutus"
             className={cn(
@@ -126,9 +135,9 @@ const Navbar = () => {
             )}
           </div>
 
-          <Button className="bg-orange-500 hover:bg-orange-600 text-white rounded-full">
+          {/* <Button className="bg-orange-500 hover:bg-orange-600 text-white rounded-full">
             Get Started
-          </Button>
+          </Button> */}
         </div>
 
         {/* Mobile Menu Button */}
@@ -178,6 +187,9 @@ const Navbar = () => {
         )}
       >
         <div className="container flex flex-col gap-4">
+          <a href="/" className="nav-link">
+            Home
+          </a>
           <a href="/aboutus" className="nav-link">
             About
           </a>
@@ -239,9 +251,9 @@ const Navbar = () => {
             Contact
           </a> */}
 
-          <Button className="bg-orange-500 hover:bg-orange-600 text-white rounded-full w-full">
+          {/* <Button className="bg-orange-500 hover:bg-orange-600 text-white rounded-full w-full">
             Get Started
-          </Button>
+          </Button> */}
         </div>
       </div>
     </header>

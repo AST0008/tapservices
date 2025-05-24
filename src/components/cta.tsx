@@ -58,7 +58,7 @@ const CTA = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center text-white mb-12">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-              Interested in working with Tapservices?
+              Interested in working with Tapservices Inc.?
             </h2>
             <p className="text-xl md:text-2xl mb-10 text-orange-50">
               Let's discuss how we can help you streamline your trucking permit
@@ -190,16 +190,16 @@ const CTA = () => {
                     name="terms"
                   />
                   <label htmlFor="terms" className="text-sm text-gray-700">
-                    By clicking this I agree to receive SMS from Tapservices.
+                    By clicking this I agree to receive SMS from Tapservices Inc.
                     You can reply STOP to opt-out at any time. Tapservices will
                     use the data provided in accordance with{" "}
-                    <a
+                    {/* <a
                       href="/terms"
                       className="text-orange-500 hover:text-orange-600"
                     >
                       Terms of Service
                     </a>{" "}
-                    and{" "}
+                    and{" "} */}
                     <a
                       href="/privacy"
                       className="text-orange-500 hover:text-orange-600"

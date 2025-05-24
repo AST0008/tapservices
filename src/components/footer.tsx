@@ -14,7 +14,7 @@ const Footer = () => {
               href="#"
               className="text-2xl font-bold text-white mb-4 flex items-center"
             >
-              <span className="text-orange-500">Tap</span>services
+              <span className="text-orange-500">Tap</span>services Inc.
             </a>
             <p className="mb-4">
               The biggest trucking permits business, serving more than 5000
@@ -226,15 +226,15 @@ const Footer = () => {
                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                   ></path>
                 </svg>
-                <span>Mr Himanshu</span>
+                <span>+1 559-721-4467</span>
               </li>
             </ul>
           </div>
-        </div>
+      </div>
 
         <div className="border-t border-gray-800 py-6">
           <p className="text-center text-sm">
-            © {currentYear} Tapservices. All rights reserved.
+            © {currentYear} Tapservices Inc. All rights reserved.
           </p>
         </div>
       </div>
