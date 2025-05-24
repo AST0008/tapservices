@@ -3,15 +3,15 @@ import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
-    <section className="pt-32 pb-16 hero-gradient">
+    <section className="pt-32 pb-16 bg-gray-800">
       <div className="container px-4 mx-auto">
         <div className="flex flex-col lg:flex-row items-center">
           {/* Left Content */}
           <div className="w-full lg:w-1/2 mb-12 lg:mb-0 lg:pr-10 opacity-0 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-gray-900">
+            <h1 className="text-4xl text-gray-300 md:text-5xl lg:text-6xl font-bold leading-tight mb-6 ">
               Nationwide Trucking Permits Made <span className="text-orange-500">Easy</span>
             </h1>
-            <p className="text-xl text-gray-600 mb-8">
+            <p className="text-xl text-gray-400 mb-8">
               Helping over 5000 truckers stay compliant for 10+ years.
             </p>
             <div className="flex flex-wrap gap-4">
@@ -25,14 +25,14 @@ const Hero = () => {
           </div>
 
           {/* Right Content - Dashboard Illustration */}
-          <div className="w-full lg:w-1/2 opacity-0 animate-scale-in" style={{ animationDelay: '0.6s' }}>
+          {/* <div className="w-full lg:w-1/2 opacity-0 animate-scale-in" style={{ animationDelay: '0.6s' }}>
             <div className="relative">
               <div className="absolute -top-10 -left-10 w-20 h-20 bg-orange-500 rounded-full opacity-20"></div>
               <div className="absolute -bottom-8 -right-8 w-16 h-16 bg-orange-500 rounded-full opacity-20"></div>
               
               <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100 p-1">
                 <div className="bg-gray-50 rounded-xl p-6 relative">
-                  {/* Mock Dashboard Header */}
+                
                   <div className="flex justify-between items-center mb-6">
                     <div>
                       <h3 className="font-bold text-lg text-gray-800">Permit Dashboard</h3>
@@ -46,7 +46,7 @@ const Hero = () => {
                     </div>
                   </div>
                   
-                  {/* Mock Charts and Data */}
+             
                   <div className="grid grid-cols-2 gap-4 mb-6">
                     <div className="bg-white p-4 rounded-lg shadow-sm">
                       <h4 className="text-sm font-medium text-gray-500 mb-2">Active Permits</h4>
@@ -63,8 +63,7 @@ const Hero = () => {
                       </div>
                     </div>
                   </div>
-                  
-                  {/* Mock Table */}
+       
                   <div className="bg-white rounded-lg shadow-sm p-4">
                     <h4 className="font-medium text-gray-800 mb-3">Recent Permits</h4>
                     <div className="space-y-3">
@@ -94,6 +93,10 @@ const Hero = () => {
                 </div>
               </div>
             </div>
+          </div> */}
+
+          <div className="w-full lg:w-1/2 opacity-0 animate-scale-in" style={{ animationDelay: '0.6s' }}>
+            <img src="/trucks-hero.png" alt="About Us" className="w-full h-full object-cover rounded-2xl" />
           </div>
         </div>
       </div>

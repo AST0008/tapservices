@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -24,36 +23,34 @@ const Navbar = () => {
     <header
       className={cn(
         "fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300",
-        scrolled
-          ? "bg-white shadow-md py-2"
-          : "bg-transparent py-4"
+        scrolled ? "bg-white shadow-md py-2" : "bg-gray-800 text-gray-300 py-4"
       )}
     >
       <nav className="container flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <a href="#" className="text-2xl font-bold text-gray-900">
+          <a href="#" className="text-2xl font-bold text-gray-400">
             <span className="text-orange-500">Tap</span>services
           </a>
         </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex items-center gap-8">
-          <a href="#about" className="nav-link">
+        <div className="hidden lg:flex items-center text-red-500 gap-8">
+          <a href="#about" className={cn("nav-link", scrolled ? "text-gray-600": "text-gray-200")}>
             About
           </a>
-          <a href="#services" className="nav-link">
+          <a href="#services" className={cn("nav-link", scrolled ? "text-gray-600": "text-gray-200")}>
             Services
           </a>
-          <a href="#statistics" className="nav-link">
+          <a href="#statistics" className={cn("nav-link", scrolled ? "text-gray-600": "text-gray-200")}>
             Statistics
           </a>
-          <a href="#testimonials" className="nav-link">
+          <a href="#testimonials" className={cn("nav-link", scrolled ? "text-gray-600": "text-gray-200")}>
             Testimonials
           </a>
-          <a href="#news" className="nav-link">
+          <a href="#news" className={cn("nav-link", scrolled ? "text-gray-600": "text-gray-200")}>
             News
           </a>
-          <a href="#contact" className="nav-link">
+          <a href="#contact" className={cn("nav-link", scrolled ? "text-gray-600": "text-gray-200")}>
             Contact
           </a>
           <Button className="bg-orange-500 hover:bg-orange-600 text-white rounded-full">

@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 
 const About = () => {
@@ -7,7 +6,7 @@ const About = () => {
       <div className="container px-4 mx-auto">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           {/* Left Image */}
-          <div className="w-full lg:w-1/2">
+          {/* <div className="w-full lg:w-1/2">
             <div className="relative">
               <div className="relative z-10 rounded-2xl overflow-hidden shadow-xl">
                 <div className="aspect-[4/3] bg-gray-200 w-full">
@@ -28,6 +27,13 @@ const About = () => {
               <div className="absolute -bottom-6 -right-6 w-64 h-64 rounded-full bg-orange-100 -z-10"></div>
               <div className="absolute -top-6 -left-6 w-32 h-32 rounded-full bg-orange-50 -z-10"></div>
             </div>
+          </div> */}
+          <div className="w-full lg:w-1/2">
+            <img
+              src="/truck.jpg"
+              alt="About Us"
+              className="w-full h-full object-cover rounded-2xl"
+            />
           </div>
 
           {/* Right Content */}
@@ -36,14 +42,26 @@ const About = () => {
               About <span className="text-orange-500">Us</span>
             </h2>
             <p className="text-lg text-gray-700 mb-6">
-              Welcome To Tapservices — the biggest trucking permits business, serving more than 5000 customers nationwide over the last ten years. Our team of experts is dedicated to helping trucking companies navigate the complex world of permits and compliance.
+              Welcome To Tapservices — the biggest trucking permits business,
+              serving more than 5000 customers nationwide over the last ten
+              years. Our team of experts is dedicated to helping trucking
+              companies navigate the complex world of permits and compliance.
             </p>
             <p className="text-lg text-gray-700 mb-8">
-              We understand the challenges trucking companies face when it comes to staying compliant with federal and state regulations. That's why we've built a service that takes the hassle out of permit management, allowing you to focus on what matters most—running your business.
+              We understand the challenges trucking companies face when it comes
+              to staying compliant with federal and state regulations. That's
+              why we've built a service that takes the hassle out of permit
+              management, allowing you to focus on what matters most—running
+              your business.
             </p>
-            <Button className="bg-orange-500 hover:bg-orange-600 text-white rounded-lg px-8 py-3 text-lg">
+            {/* <Button className="bg-orange-500 hover:bg-orange-600 text-white rounded-lg px-8 py-3 text-lg">
               Learn More
-            </Button>
+            </Button> */}
+            {/* Founder name and image */}
+            <div className="flex flex-col items-center  justify-end">
+              <h3 className="text-lg font-bold">- Mr. Himanshu</h3>
+              <p className="text-gray-600">Founder & CEO</p>
+            </div>
           </div>
         </div>
       </div>
