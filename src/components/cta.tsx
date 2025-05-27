@@ -26,23 +26,43 @@ const CTA = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", formData);
-    toast({
-      title: "Message Sent!",
-      description: "We'll get back to you within 24 hours.",
-    });
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      company: "",
-      message: "",
-      terms: false,
-    });
+
+    const endpoint =
+      "https://script.google.com/macros/s/AKfycbw1HvfYd2fMP5tTvAgmF9Yr8PW6t592YFupKOmbiFaKOEwaDtTuIQw_M1sBZf9Z-dt1dA/exec";
+
+    try {
+      await fetch("https://sheetdb.io/api/v1/mzxhmjoh04avh", {
+        method: "POST",
+        body: JSON.stringify({ data: [formData] }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      toast({
+        title: "Message Sent!",
+        description: "We'll get back to you within 24 hours.",
+      });
+
+      // Reset form
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        company: "",
+        message: "",
+        terms: false,
+      });
+    } catch (error) {
+      toast({
+        title: "Error",
+        description:
+          "There was an issue submitting your message. Try again later.",
+      });
+      console.error("Submission error:", error);
+    }
   };
 
   return (
@@ -190,9 +210,9 @@ const CTA = () => {
                     name="terms"
                   />
                   <label htmlFor="terms" className="text-sm text-gray-700">
-                    By clicking this I agree to receive SMS from Tapservices Inc.
-                    You can reply STOP to opt-out at any time. Tapservices will
-                    use the data provided in accordance with{" "}
+                    By clicking this I agree to receive SMS from Tapservices
+                    Inc. You can reply STOP to opt-out at any time. Tapservices
+                    will use the data provided in accordance with{" "}
                     {/* <a
                       href="/terms"
                       className="text-orange-500 hover:text-orange-600"
