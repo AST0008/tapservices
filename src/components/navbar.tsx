@@ -88,7 +88,7 @@ const Navbar = () => {
             </button>
 
             {servicesDropdownOpen && (
-              <div className="absolute top-full left-0 mt-2 w-60 bg-white border rounded shadow-md z-50">
+              <div className="absolute top-full lg:left-[-80px] xl:left-[-50px] mt-2 w-60 bg-white border rounded shadow-md z-50">
                 <a
                   href="/open-new-trucking-company"
                   className="block px-4 py-2 hover:bg-gray-100 text-gray-800"
