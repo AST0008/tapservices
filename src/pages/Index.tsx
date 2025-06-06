@@ -8,19 +8,22 @@ import Testimonials from "@/components/testimonials";
 import News from "@/components/news";
 import CTA from "@/components/cta";
 import Footer from "@/components/footer";
+import BecoLandingPage from "@/components/landing";
 
 const Index = () => {
   return (
     <div className="min-h-screen overflow-hidden">
-      <Navbar />
+      {/* <Navbar /> */}
       <main>
-        <Hero />
+        {/* <Hero />
         <About />
         <Services />
         <Statistics  />
         <Testimonials />
         <News />
-        <CTA />
+        <CTA /> */}
+
+        <BecoLandingPage />
       </main>
       <Footer />
     </div>
