@@ -962,7 +962,7 @@ const BecoLandingPage: React.FC = () => {
 
         {/* Hero Section */}
         <section
-          className="relative min-h-screen bg-cover bg-center bg-no-repeat flex items-center justify-start overflow-hidden"
+          className="relative min-h-screen bg-cover bg-center bg-no-repeat flex items-center overflow-hidden"
           style={{
             backgroundImage: `url(${slides[currentSlide].image})`,
           }}
@@ -973,13 +973,32 @@ const BecoLandingPage: React.FC = () => {
           {/* Additional glass layer for depth */}
           <div className="absolute inset-0 bg-white/5 "></div>
 
-          {/* Main content with enhanced slide animation */}
-          <div className="relative z-10 max-w-7xl px-6 lg:px-12 py-16">
+          {/* Main content with enhanced slide animation - Dynamic positioning */}
+          <div
+            className={`relative z-10  px-6 lg:px-12 py-16 w-full flex ${
+              currentSlide % 2 === 0 ? "justify-start" : "justify-end"
+            }`}
+          >
             <motion.div
               key={currentSlide} // This ensures re-animation on slide change
-              initial={{ opacity: 0, y: 80, scale: 0.9 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: -80, scale: 0.9 }}
+              initial={{
+                opacity: 0,
+                y: 80,
+                scale: 0.9,
+                x: currentSlide % 2 === 0 ? -100 : 100,
+              }}
+              animate={{
+                opacity: 1,
+                y: 0,
+                scale: 1,
+                x: 0,
+              }}
+              exit={{
+                opacity: 0,
+                y: -80,
+                scale: 0.9,
+                x: currentSlide % 2 === 0 ? 100 : -100,
+              }}
               transition={{
                 duration: 1.2,
                 ease: [0.4, 0.0, 0.2, 1],
@@ -994,7 +1013,10 @@ const BecoLandingPage: React.FC = () => {
               <div className="absolute top-0 left-0 w-full h-1/3 bg-gradient-to-b from-white/10 to-transparent rounded-t-3xl"></div> */}
 
               <motion.div
-                initial={{ opacity: 0, x: -60 }}
+                initial={{
+                  opacity: 0,
+                  x: currentSlide % 2 === 0 ? -60 : 60,
+                }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{
                   delay: 0.3,
@@ -1029,7 +1051,10 @@ const BecoLandingPage: React.FC = () => {
                   </motion.span>
                 </h1>
                 <motion.h2
-                  initial={{ opacity: 0, x: -30 }}
+                  initial={{
+                    opacity: 0,
+                    x: currentSlide % 2 === 0 ? -30 : 30,
+                  }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 1.1, duration: 0.8 }}
                   className="text-lg text-white/95 drop-shadow-lg"
@@ -1820,8 +1845,6 @@ const BecoLandingPage: React.FC = () => {
                       />
                     ))}
                   </div>
-
-             
                 </div>
               ))}
             </div>

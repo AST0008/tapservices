@@ -21,7 +21,7 @@ const Navbar = () => {
     <header
       className={cn(
         "fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300",
-        scrolled ? "bg-white shadow-md py-2" : "bg-gray-800 text-gray-300 py-4"
+        scrolled ? "bg-white shadow-md py-2" : "bg-black text-gray-300 py-4"
       )}
     >
       <nav className="container flex items-center justify-between">
@@ -65,6 +65,15 @@ const Navbar = () => {
             )}
           >
             Courses
+          </a>
+          <a
+            href="/privacy"
+            className={cn(
+              "nav-link",
+              scrolled ? "text-gray-600" : "text-gray-200"
+            )}
+          >
+            Privacy
           </a>
 
           {/* Services Dropdown */}
@@ -195,6 +204,9 @@ const Navbar = () => {
           </a>
           <a href="/courses" className="nav-link">
             Courses
+          </a>
+          <a href="/privacy" className="nav-link">
+            Privacy
           </a>
 
           {/* Mobile Services Toggle */}

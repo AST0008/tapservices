@@ -4,7 +4,7 @@ import Footer from "@/components/footer";
 const Privacy = () => {
   return (
     <div className="min-h-screen">
-      <Navbar />
+    <Navbar />
       <main className="pt-20">
         <div className="container px-4 mx-auto py-16">
           <div className="max-w-4xl mx-auto">
