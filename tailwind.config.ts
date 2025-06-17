@@ -136,7 +136,11 @@ export default {
 					'100%': {
 						'counter-increment': 'count var(--num)'
 					}
-				}
+				},
+				fadeInUp: {
+					'0%': { opacity: '0', transform: 'translateY(20px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' },
+				  },
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
@@ -144,7 +148,8 @@ export default {
 				'fade-in': 'fade-in 0.5s ease-out forwards',
 				'fade-out': 'fade-out 0.5s ease-out forwards',
 				'scale-in': 'scale-in 0.7s ease-out forwards',
-				'counter': 'counter 2s ease-out forwards'
+				'counter': 'counter 2s ease-out forwards',
+				'fade-in-up': 'fadeInUp 0.6s ease-out forwards',
 			},
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],

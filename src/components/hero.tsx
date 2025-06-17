@@ -9,9 +9,9 @@ const slides = [
     title: "Celebrating 3 Years of Growth 🚚",
     subtitle: `Fastest growing trucking permits company in California.
 
-Managing 70+ companies.
+Managing 700+ companies.
 
-Handling 100+ trucks.
+Handling 1000+ trucks.
 
 Supporting 1000+ Drivers.`,
     bg: "/trucks-hero.png",
