@@ -204,6 +204,7 @@ const Navbar = () => {
           </a>
           <a href="/courses" className="nav-link">
             Courses
+
           </a>
           <a href="/privacy" className="nav-link">
             Privacy

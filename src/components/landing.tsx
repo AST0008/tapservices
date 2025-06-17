@@ -628,6 +628,8 @@ import type { NavigationOptions } from "swiper/types";
 import { motion } from "framer-motion";
 import CTA from "./cta";
 import Navbar from "./navbar";
+import ServicePackages from "./poster";
+import ServiceCard from "./poster";
 
 const BecoLandingPage: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -755,6 +757,44 @@ const BecoLandingPage: React.FC = () => {
       Supporting 1000+ Drivers.`,
       image: "/5.png",
     },
+  ];
+
+  const firstServices = [
+    "INC & LLC Filing",
+    "BOC3 Filing",
+    "UCR",
+    "CA Number",
+    "IFTA CA",
+    "New Mexico WDT",
+    "NYC (Hut Permit)",
+    "BOC3 Filing",
+    "Federal Tax ID",
+    "S Corp Filing",
+    "USDOT/MC Number",
+    "Statement of Information",
+    "Oregon Permit (Bond by Client)",
+    "KYU Number",
+  ];
+
+  const secondServices = [
+    "IRP License Plate Renewal",
+    "2290 Tax Filing",
+    "USDOT Update",
+    "MC Number Update",
+    "UCR Registration",
+    "IFTA CA Permit Renewal",
+    "Kentucky Permit Renewal",
+    "New York Hut Permit Renewal",
+    "Oregon Permit Renewal",
+    "CARB Certificate Renewal",
+    "Connecticut Permit Renewal",
+    "IFTA CA Quarterly Fuel Tax Filing",
+    "New Mexico Quarterly Fuel Tax Filing",
+    "Kentucky Quarterly Fuel Tax Filing",
+    "New York Hut Quarterly Fuel Tax Filing",
+    "Oregon Monthly Tax Filing",
+    "Connecticut Quarterly Tax Filing",
+    "Arkansas Carrier Annual Report",
   ];
 
   const services = [
@@ -1491,6 +1531,33 @@ const BecoLandingPage: React.FC = () => {
               animation-delay: 0.2s;
             }
           `}</style>
+        </section>
+
+        {/* <ServicePackages /> */}
+
+        <section className="bg-[#f9f9f9] py-20 px-4" id="hero-services">
+          <div className="max-w-7xl mx-auto text-center mb-12">
+            <h2 className="text-4xl font-bold text-red-600">
+              Our Service Packages
+            </h2>
+            <p className="text-lg text-gray-600 mt-2">
+              Get benefit of essential services with our all-in-one packages.
+            </p>
+          </div>
+          <div className="flex flex-col sm:flex-row justify-center gap-8">
+            <ServiceCard
+              image="/poster2.png"
+              title="INC Filing Package"
+              price="Only $1249"
+              services={firstServices}
+            />
+            <ServiceCard
+              image="/poster1.png"
+              title="Mastery Service Package"
+              price="Only $349"
+              services={secondServices}
+            />
+          </div>
         </section>
 
         <section className="relative py-20 bg-gradient-to-br from-orange-50 via-red-50 to-orange-100 overflow-hidden">
