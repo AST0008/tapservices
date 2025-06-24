@@ -12,7 +12,7 @@ import Popup from "@/components/popup";
 
 const Index = () => {
   return (
-    <div className="min-h-screen overflow-hidden">
+    <div className="min-h-screen  overflow-hidden">
       {/* <Navbar /> */}
       <main>
         {/* <Hero />

@@ -26,7 +26,7 @@ const Popup = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-md px-4">
+    <div className="fixed inset-0  z-[70] flex items-center   justify-center bg-black/60 backdrop-blur-md px-4">
       <motion.div
         initial={{ opacity: 0, scale: 0.95, y: 20 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -36,13 +36,14 @@ const Popup = () => {
         {/* Close Button */}
         <button
           onClick={handleClose}
-          className="absolute top-4 right-4 p-2 hover:bg-white/20 rounded-full transition"
+          className="absolute top-8 right-4 z-50 w-10 h-10   flex items-center justify-center bg-black  hover:bg-opacity-80 text-white rounded-full transition-all bg-black shadow-md focus:outline-none focus:ring-2 focus:ring-white"
+          aria-label="Close"
         >
-          <X className="w-6 h-6 text-white" />
+          <X className="w-5 h-5 sm:w-6 sm:h-6" />
         </button>
 
         {/* Posters */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center justify-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <img
             src="/poster1.png"
             alt="Poster 1"
