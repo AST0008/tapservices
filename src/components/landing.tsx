@@ -714,7 +714,7 @@ const BecoLandingPage: React.FC = () => {
       subheading: "Your trusted partner in trucking regulations",
       description:
         "Tap Services Inc. provides expert assistance in compliance, permit management, and business formation. We help trucking professionals navigate the regulatory landscape with ease.",
-      image: "/1.png",
+      image: "/1.jpg",
     },
     {
       title1: "Get Your  ",
@@ -723,7 +723,7 @@ const BecoLandingPage: React.FC = () => {
       subheading: "",
       description:
         "IRP Apportioned Plates — Recommended for fleets with CA DMV to process IRP registration quickly.",
-      image: "/2.png",
+      image: "/2.jpg",
     },
     {
       title1: "",
@@ -732,7 +732,7 @@ const BecoLandingPage: React.FC = () => {
       subheading: "",
       description:
         "Dedicated help for DOT, EPN, Clearing House, and more to stay fully compliant.",
-      image: "/3.png",
+      image: "/3.jpg",
     },
     {
       title1: "",
@@ -741,7 +741,7 @@ const BecoLandingPage: React.FC = () => {
       subheading: "",
       description:
         "Experienced team ready to assist with all your authority requirements: DOT, EIN, MCP, IFTA, and beyond.",
-      image: "/4.png",
+      image: "/4.jpg",
     },
     {
       title1: "Celebrating ",
@@ -755,7 +755,7 @@ const BecoLandingPage: React.FC = () => {
       Handling 1000+ trucks.
       
       Supporting 1000+ Drivers.`,
-      image: "/5.png",
+      image: "/5.jpg",
     },
   ];
 
