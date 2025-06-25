@@ -36,7 +36,7 @@ const Popup = () => {
         {/* Close Button */}
         <button
           onClick={handleClose}
-          className="absolute top-20 lg:top-8 right-4 z-50 w-10 h-10   flex items-center justify-center bg-black  hover:bg-opacity-80 text-white rounded-full transition-all bg-black shadow-md focus:outline-none focus:ring-2 focus:ring-white"
+          className="absolute top-40 md:top-8 lg:top-8 right-4 z-50 w-10 h-10   flex items-center justify-center bg-black  hover:bg-opacity-80 text-white rounded-full transition-all bg-black shadow-md focus:outline-none focus:ring-2 focus:ring-white"
           aria-label="Close"
         >
           <X className="w-5 h-5 sm:w-6 sm:h-6" />
