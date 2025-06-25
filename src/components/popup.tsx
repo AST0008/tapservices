@@ -45,12 +45,12 @@ const Popup = () => {
         {/* Posters */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <img
-            src="/poster1.png"
+            src="/poster1.jpg"
             alt="Poster 1"
             className="rounded-xl w-full h-full object-cover transition-transform duration-300 hover:scale-105"
           />
           <img
-            src="/poster2.png"
+            src="/poster2.jpg"
             alt="Poster 2"
             className="rounded-xl w-full h-full object-cover transition-transform duration-300 hover:scale-105"
           />
