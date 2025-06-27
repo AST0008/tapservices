@@ -132,7 +132,7 @@ const Navbar = () => {
                   href="/ifta-fuel-tax-return"
                   className="block px-4 py-2 hover:bg-gray-100 text-gray-800"
                 >
-                  IFTA Fue Tax
+                  IFTA Fuel Tax
                 </a>
                 <a
                   href="/oregon-truck-permits"
@@ -243,7 +243,7 @@ const Navbar = () => {
                 DOT Clearing House
               </a>
               <a href="/ifta-fuel-tax-return" className="text-gray-800">
-                IFTA Fue Tax
+                IFTA Fuel Tax
               </a>
               <a href="/oregon-truck-permits" className="text-gray-800">
                 Oregon Truck Permits
