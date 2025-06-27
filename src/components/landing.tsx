@@ -1546,13 +1546,13 @@ const BecoLandingPage: React.FC = () => {
           </div>
           <div className="flex flex-col sm:flex-row justify-center gap-8">
             <ServiceCard
-              image="/poster2.png"
+              image="/poster2.jpg"
               title="INC Filing Package"
               price="Only $1249"
               services={firstServices}
             />
             <ServiceCard
-              image="/poster1.png"
+              image="/poster1.jpg"
               title="Mastery Service Package"
               price="Only $349"
               services={secondServices}
