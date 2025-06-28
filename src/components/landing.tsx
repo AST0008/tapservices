@@ -778,7 +778,7 @@ const BecoLandingPage: React.FC = () => {
 
   const secondServices = [
     "IRP License Plate Renewal",
-    "2290 Tax Filing",
+    "2290 Tax Filing (govt. Fee+ processing charge by clients)",
     "USDOT Update",
     "MC Number Update",
     "UCR Registration",
@@ -1124,6 +1124,12 @@ const BecoLandingPage: React.FC = () => {
                     boxShadow: "0 20px 40px rgba(0,0,0,0.3)",
                     backgroundColor: "rgba(255,255,255,0.95)",
                   }}
+                  onClick={() => {
+                    const ctaSection = document.getElementById("cta-form");
+                    if (ctaSection) {
+                      ctaSection.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
                   whileTap={{ scale: 0.95 }}
                   transition={{ type: "spring", stiffness: 300 }}
                   className="bg-white/90 backdrop-blur-md text-black font-bold px-8 py-4 rounded-xl shadow-2xl border border-white/50 hover:bg-white/95 transition-all duration-300"
@@ -1137,6 +1143,12 @@ const BecoLandingPage: React.FC = () => {
                     borderColor: "rgba(255,255,255,0.8)",
                   }}
                   whileTap={{ scale: 0.95 }}
+                  onClick={() => {
+                    const ctaSection = document.getElementById("cta-form");
+                    if (ctaSection) {
+                      ctaSection.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
                   transition={{ type: "spring", stiffness: 300 }}
                   className="border-2 border-white/60 bg-white/10 backdrop-blur-md text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/15 transition-all duration-300 shadow-lg"
                 >
@@ -1454,7 +1466,15 @@ const BecoLandingPage: React.FC = () => {
                     </div>
 
                     {/* CTA Button */}
-                    <button className="inline-flex items-center px-8 py-4 bg-white text-orange-600 font-semibold rounded-xl hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-lg group">
+                    <button
+                      onClick={() => {
+                        const ctaSection = document.getElementById("cta-form");
+                        if (ctaSection) {
+                          ctaSection.scrollIntoView({ behavior: "smooth" });
+                        }
+                      }}
+                      className="inline-flex items-center px-8 py-4 bg-white text-orange-600 font-semibold rounded-xl hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-lg group"
+                    >
                       Read More
                       <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                     </button>

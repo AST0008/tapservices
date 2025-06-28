@@ -157,6 +157,12 @@ const OregonTruckPermits = () => {
                   scale: 1.08,
                   backgroundColor: "rgba(255,255,255,0.15)",
                 }}
+                onClick={() => {
+                  const ctaSection = document.getElementById("cta-form");
+                  if (ctaSection) {
+                    ctaSection.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
                 whileTap={{ scale: 0.95 }}
                 className="border-2 border-white/60 bg-white/10 backdrop-blur-md text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/15 transition-all duration-300 shadow-lg flex items-center gap-2 justify-center"
               >
@@ -284,7 +290,15 @@ const OregonTruckPermits = () => {
                   ))}
                 </div>
 
-                <button className="bg-white text-orange-600 px-6 py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-200 flex items-center gap-2">
+                <button
+                  onClick={() => {
+                    const ctaSection = document.getElementById("cta-form");
+                    if (ctaSection) {
+                      ctaSection.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
+                  className="bg-white text-orange-600 px-6 py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-200 flex items-center gap-2"
+                >
                   Get Started
                   <ArrowRight className="w-5 h-5" />
                 </button>

@@ -40,8 +40,8 @@ const About = () => {
               About <span className="text-orange-500">Us</span>
             </h2>
             <p className="text-lg text-gray-700 mb-6">
-              Welcome To Tapservices — the biggest trucking permits business,
-              serving more than 5000 customers nationwide over the last ten
+              Welcome To Tapservices INC — the biggest trucking permits business,
+              serving more than 1000+ customers nationwide over the last 3
               years. Our team of experts is dedicated to helping trucking
               companies navigate the complex world of permits and compliance.
             </p>

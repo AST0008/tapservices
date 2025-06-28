@@ -27,7 +27,7 @@ const testimonials = [
   },
   {
     id: 4,
-    quote: "We've been working with Tapservices for over 5 years now, and they've never let us down. Their expertise in trucking permits is unmatched in the industry.",
+    quote: "We've been working with Tapservices INC for over 5 years now, and they've never let us down. Their expertise in trucking permits is unmatched in the industry.",
     name: "Jennifer Williams",
     company: "Williams Freight Systems",
     avatar: "/placeholder.svg"

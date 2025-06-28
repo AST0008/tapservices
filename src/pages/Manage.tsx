@@ -144,6 +144,12 @@ const ManagePermits = () => {
                   scale: 1.08,
                   boxShadow: "0 20px 40px rgba(0,0,0,0.3)",
                 }}
+                onClick={() => {
+                  const ctaSection = document.getElementById("cta-form");
+                  if (ctaSection) {
+                    ctaSection.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-white/90 backdrop-blur-md text-black font-bold px-8 py-4 rounded-xl shadow-2xl border border-white/50 hover:bg-white/95 transition-all duration-300"
               >
@@ -153,6 +159,12 @@ const ManagePermits = () => {
                 whileHover={{
                   scale: 1.08,
                   backgroundColor: "rgba(255,255,255,0.15)",
+                }}
+                onClick={() => {
+                  const ctaSection = document.getElementById("cta-form");
+                  if (ctaSection) {
+                    ctaSection.scrollIntoView({ behavior: "smooth" });
+                  }
                 }}
                 whileTap={{ scale: 0.95 }}
                 className="border-2 border-white/60 bg-white/10 backdrop-blur-md text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/15 transition-all duration-300 shadow-lg flex items-center gap-2 justify-center"
@@ -232,7 +244,15 @@ const ManagePermits = () => {
                     <p className="text-gray-600 leading-relaxed mb-6">
                       {permit.description}
                     </p>
-                    <button className="inline-flex items-center text-orange-600 font-medium hover:translate-x-1 transition-transform duration-300 group/btn">
+                    <button
+                      onClick={() => {
+                        const ctaSection = document.getElementById("cta-form");
+                        if (ctaSection) {
+                          ctaSection.scrollIntoView({ behavior: "smooth" });
+                        }
+                      }}
+                      className="inline-flex items-center text-orange-600 font-medium hover:translate-x-1 transition-transform duration-300 group/btn"
+                    >
                       Learn More
                       <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform duration-300" />
                     </button>

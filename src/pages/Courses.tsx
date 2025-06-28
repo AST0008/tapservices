@@ -1,21 +1,29 @@
-"use client"
-import { useState, useEffect, useRef } from "react"
-import { motion } from "framer-motion"
-import { ArrowRight, CheckCircle, Play, BookOpen, Award, Users, Clock } from 'lucide-react'
-import Navbar from "@/components/navbar"
-import CTA from "@/components/cta"
-import Footer from "@/components/footer"
+"use client";
+import { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
+import {
+  ArrowRight,
+  CheckCircle,
+  Play,
+  BookOpen,
+  Award,
+  Users,
+  Clock,
+} from "lucide-react";
+import Navbar from "@/components/navbar";
+import CTA from "@/components/cta";
+import Footer from "@/components/footer";
 
 const Courses = () => {
-  const [showScrollTop, setShowScrollTop] = useState(false)
+  const [showScrollTop, setShowScrollTop] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setShowScrollTop(window.scrollY > 400)
-    }
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+      setShowScrollTop(window.scrollY > 400);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const trainingFeatures = [
     "Supervisor's responsibility in establishing a drug-free workplace",
@@ -25,13 +33,14 @@ const Courses = () => {
     "How to get in touch with an employee in this case",
     "Whether or not to test",
     "How to carry out tests",
-  ]
+  ];
 
   const courseHighlights = [
     {
       icon: BookOpen,
       title: "Comprehensive Training",
-      description: "Complete DOT supervisor training program with certification",
+      description:
+        "Complete DOT supervisor training program with certification",
     },
     {
       icon: Award,
@@ -48,7 +57,7 @@ const Courses = () => {
       title: "Flexible Schedule",
       description: "Complete training at your own pace with our software",
     },
-  ]
+  ];
 
   return (
     <div className="min-h-screen overflow-hidden">
@@ -86,7 +95,10 @@ const Courses = () => {
               transition={{ delay: 0.3, duration: 0.8 }}
               className="text-5xl lg:text-7xl font-extrabold text-white leading-tight drop-shadow-2xl"
             >
-              Professional <span className="text-orange-500 px-3 py-2 rounded-xl shadow-lg">Courses</span>
+              Professional{" "}
+              <span className="text-orange-500 px-3 py-2 rounded-xl shadow-lg">
+                Courses
+              </span>
             </motion.h1>
 
             <motion.p
@@ -95,7 +107,8 @@ const Courses = () => {
               transition={{ delay: 0.5, duration: 1 }}
               className="text-white/85 text-xl relative z-10 drop-shadow-md max-w-2xl mx-auto"
             >
-              Join us to get started with the different types of courses designed for trucking professionals.
+              Join us to get started with the different types of courses
+              designed for trucking professionals.
             </motion.p>
 
             <motion.div
@@ -105,14 +118,26 @@ const Courses = () => {
               className="flex flex-col sm:flex-row gap-4 justify-center relative z-10"
             >
               <motion.button
-                whileHover={{ scale: 1.08, boxShadow: "0 20px 40px rgba(0,0,0,0.3)" }}
+                whileHover={{
+                  scale: 1.08,
+                  boxShadow: "0 20px 40px rgba(0,0,0,0.3)",
+                }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-white/90 backdrop-blur-md text-black font-bold px-8 py-4 rounded-xl shadow-2xl border border-white/50 hover:bg-white/95 transition-all duration-300"
               >
                 Enroll Now
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.08, backgroundColor: "rgba(255,255,255,0.15)" }}
+                whileHover={{
+                  scale: 1.08,
+                  backgroundColor: "rgba(255,255,255,0.15)",
+                }}
+                onClick={() => {
+                  const ctaSection = document.getElementById("cta-form");
+                  if (ctaSection) {
+                    ctaSection.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
                 whileTap={{ scale: 0.95 }}
                 className="border-2 border-white/60 bg-white/10 backdrop-blur-md text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/15 transition-all duration-300 shadow-lg flex items-center gap-2 justify-center"
               >
@@ -136,9 +161,12 @@ const Courses = () => {
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 animate-fadeIn">Course Highlights</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 animate-fadeIn">
+              Course Highlights
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto animate-fadeIn delay-200">
-              Discover what makes our training programs exceptional and industry-leading.
+              Discover what makes our training programs exceptional and
+              industry-leading.
             </p>
           </div>
 
@@ -151,8 +179,12 @@ const Courses = () => {
                     <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl flex items-center justify-center mx-auto mb-4">
                       <highlight.icon className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-2">{highlight.title}</h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">{highlight.description}</p>
+                    <h3 className="text-lg font-bold text-gray-900 mb-2">
+                      {highlight.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      {highlight.description}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -182,9 +214,13 @@ const Courses = () => {
               <h2 className="text-4xl font-extrabold bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent mb-6">
                 DOT Supervisor Training Program
               </h2>
-              
+
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Tapservices is introducing its own software, which makes it simple to complete the training and obtain a certificate. You might be asking why you must do this training. To help supervisors of DOT-regulated personnel recognise why, here are 7 compelling reasons:
+                Tapservices INC is introducing its own software, which makes it
+                simple to complete the training and obtain a certificate. You
+                might be asking why you must do this training. To help
+                supervisors of DOT-regulated personnel recognise why, here are 7
+                compelling reasons:
               </p>
 
               <div className="space-y-4 mb-8">
@@ -193,15 +229,30 @@ const Courses = () => {
                     <div className="w-6 h-6 bg-gradient-to-r from-orange-500 to-red-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                       <CheckCircle className="w-4 h-4 text-white" />
                     </div>
-                    <span className="text-gray-700 leading-relaxed">{feature}</span>
+                    <span className="text-gray-700 leading-relaxed">
+                      {feature}
+                    </span>
                   </div>
                 ))}
               </div>
 
               <div className="bg-gradient-to-r from-orange-500 to-red-600 rounded-2xl p-6 text-white mb-8">
-                <h3 className="text-2xl font-bold mb-4">Enroll Now For The Training</h3>
-                <p className="mb-4">Contact us by using this simple form and we will guide you further</p>
-                <button className="bg-white text-orange-600 px-6 py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-200 flex items-center gap-2">
+                <h3 className="text-2xl font-bold mb-4">
+                  Enroll Now For The Training
+                </h3>
+                <p className="mb-4">
+                  Contact us by using this simple form and we will guide you
+                  further
+                </p>
+                <button
+                  onClick={() => {
+                    const ctaSection = document.getElementById("cta-form");
+                    if (ctaSection) {
+                      ctaSection.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
+                  className="bg-white text-orange-600 px-6 py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-200 flex items-center gap-2"
+                >
                   Get Started
                   <ArrowRight className="w-5 h-5" />
                 </button>
@@ -250,7 +301,7 @@ const Courses = () => {
         .delay-300 { animation-delay: 0.3s; }
       `}</style>
     </div>
-  )
-}
+  );
+};
 
-export default Courses
+export default Courses;

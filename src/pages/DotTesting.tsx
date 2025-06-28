@@ -126,6 +126,12 @@ const DotTesting = () => {
                   boxShadow: "0 20px 40px rgba(0,0,0,0.3)",
                 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={() => {
+                  const ctaSection = document.getElementById("cta-form");
+                  if (ctaSection) {
+                    ctaSection.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
                 className="bg-white/90 backdrop-blur-md text-black font-bold px-8 py-4 rounded-xl shadow-2xl border border-white/50 hover:bg-white/95 transition-all duration-300"
               >
                 Get Started
@@ -136,6 +142,12 @@ const DotTesting = () => {
                   backgroundColor: "rgba(255,255,255,0.15)",
                 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={() => {
+                  const ctaSection = document.getElementById("cta-form");
+                  if (ctaSection) {
+                    ctaSection.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
                 className="border-2 border-white/60 bg-white/10 backdrop-blur-md text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/15 transition-all duration-300 shadow-lg flex items-center gap-2 justify-center"
               >
                 <Play className="w-5 h-5" />
@@ -244,7 +256,15 @@ const DotTesting = () => {
                   performance history, medical certificates, and more — all in
                   one place.
                 </p>
-                <button className="bg-white text-orange-600 px-6 py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-200 flex items-center gap-2">
+                <button
+                  onClick={() => {
+                    const ctaSection = document.getElementById("cta-form");
+                    if (ctaSection) {
+                      ctaSection.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
+                  className="bg-white text-orange-600 px-6 py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-200 flex items-center gap-2"
+                >
                   Learn More
                   <ArrowRight className="w-5 h-5" />
                 </button>

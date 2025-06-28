@@ -214,7 +214,7 @@ const Privacy = () => {
                 </p>
                 <div className="bg-gray-50 p-4 rounded-lg mt-4">
                   <p>
-                    <strong>Email:</strong> 1Tap@tapservicesusa.com
+                    <strong>Email:</strong> 1tap@tapservicesusa.com
                   </p>
                   <p>
                     <strong>Phone:</strong> +1 559-721-4467
