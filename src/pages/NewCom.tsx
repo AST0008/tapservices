@@ -1,21 +1,31 @@
-"use client"
-import { useState, useEffect } from "react"
-import { motion } from "framer-motion"
-import { ArrowRight, CheckCircle, Play, Building2, FileText, Shield, Clock, AlertTriangle, Truck } from 'lucide-react'
-import Navbar from "@/components/navbar"
-import CTA from "@/components/cta"
-import Footer from "@/components/footer"
+"use client";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import {
+  ArrowRight,
+  CheckCircle,
+  Play,
+  Building2,
+  FileText,
+  Shield,
+  Clock,
+  AlertTriangle,
+  Truck,
+} from "lucide-react";
+import Navbar from "@/components/navbar";
+import CTA from "@/components/cta";
+import Footer from "@/components/footer";
 
 const StartTruckingCompany = () => {
-  const [showScrollTop, setShowScrollTop] = useState(false)
+  const [showScrollTop, setShowScrollTop] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setShowScrollTop(window.scrollY > 400)
-    }
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+      setShowScrollTop(window.scrollY > 400);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const keyQuestions = [
     "What name do you intend to give your trucking business?",
@@ -25,7 +35,7 @@ const StartTruckingCompany = () => {
     "Do you have the initial investment necessary to launch this business?",
     "Are you able to finish the registration and permitting process with the necessary time and experience?",
     "Do you have the time to submit documents to state and federal agencies on a quarterly and annual basis?",
-  ]
+  ];
 
   const processSteps = [
     {
@@ -48,7 +58,7 @@ const StartTruckingCompany = () => {
       title: "Quick Turnaround",
       description: "Complete setup in just 4-6 hours with our expert team",
     },
-  ]
+  ];
 
   return (
     <div className="min-h-screen overflow-hidden">
@@ -86,7 +96,10 @@ const StartTruckingCompany = () => {
               transition={{ delay: 0.3, duration: 0.8 }}
               className="text-5xl lg:text-7xl font-extrabold text-white leading-tight drop-shadow-2xl"
             >
-              Start Your <span className="text-orange-500 px-3 py-2 rounded-xl shadow-lg">Trucking Company</span>
+              Start Your{" "}
+              <span className="text-orange-500 px-3 py-2 rounded-xl shadow-lg">
+                Trucking Company
+              </span>
             </motion.h1>
 
             <motion.p
@@ -105,15 +118,33 @@ const StartTruckingCompany = () => {
               className="flex flex-col sm:flex-row gap-4 justify-center relative z-10"
             >
               <motion.button
-                whileHover={{ scale: 1.08, boxShadow: "0 20px 40px rgba(0,0,0,0.3)" }}
+                whileHover={{
+                  scale: 1.08,
+                  boxShadow: "0 20px 40px rgba(0,0,0,0.3)",
+                }}
+                onClick={() => {
+                  const ctaSection = document.getElementById("cta-form");
+                  if (ctaSection) {
+                    ctaSection.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-white/90 backdrop-blur-md text-black font-bold px-8 py-4 rounded-xl shadow-2xl border border-white/50 hover:bg-white/95 transition-all duration-300"
               >
                 Get Started Today
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.08, backgroundColor: "rgba(255,255,255,0.15)" }}
+                whileHover={{
+                  scale: 1.08,
+                  backgroundColor: "rgba(255,255,255,0.15)",
+                }}
                 whileTap={{ scale: 0.95 }}
+                onClick={() => {
+                  const ctaSection = document.getElementById("cta-form");
+                  if (ctaSection) {
+                    ctaSection.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
                 className="border-2 border-white/60 bg-white/10 backdrop-blur-md text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/15 transition-all duration-300 shadow-lg flex items-center gap-2 justify-center"
               >
                 <Play className="w-5 h-5" />
@@ -136,9 +167,12 @@ const StartTruckingCompany = () => {
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 animate-fadeIn">Our Process</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 animate-fadeIn">
+              Our Process
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto animate-fadeIn delay-200">
-              We make starting your trucking company fast, easy, and stress-free.
+              We make starting your trucking company fast, easy, and
+              stress-free.
             </p>
           </div>
 
@@ -151,8 +185,12 @@ const StartTruckingCompany = () => {
                     <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl flex items-center justify-center mx-auto mb-4">
                       <step.icon className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-2">{step.title}</h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">{step.description}</p>
+                    <h3 className="text-lg font-bold text-gray-900 mb-2">
+                      {step.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      {step.description}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -184,14 +222,24 @@ const StartTruckingCompany = () => {
                 <h2 className="text-4xl font-extrabold bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text text-transparent mb-6">
                   Open New Trucking Company
                 </h2>
-                
+
                 <div className="space-y-6 text-gray-700 leading-relaxed">
                   <p>
-                    With brilliance and speed, we are opening a tonne of new businesses every day. Customers have the option of starting their own trucking businesses in person or over the phone. We manage all the permits, US DOT drug and alcohol tests, and FMCSA audit support, and it only takes us 4-6 hours to start a new firm for our clients.
+                    With brilliance and speed, we are opening a tonne of new
+                    businesses every day. Customers have the option of starting
+                    their own trucking businesses in person or over the phone.
+                    We manage all the permits, US DOT drug and alcohol tests,
+                    and FMCSA audit support, and it only takes us 4-6 hours to
+                    start a new firm for our clients.
                   </p>
-                  
+
                   <p>
-                    One of the U.S. businesses with the most regulations is trucking, and establishing a trucking business necessitates the filing of various documents. The personnel at Tap Truck Permit & Services is fully aware of the paperwork and licences (in-cab permits, decals, plates, etc.) that must be submitted in order to launch your trucking business.
+                    One of the U.S. businesses with the most regulations is
+                    trucking, and establishing a trucking business necessitates
+                    the filing of various documents. The personnel at Tap Truck
+                    Permit & Services is fully aware of the paperwork and
+                    licences (in-cab permits, decals, plates, etc.) that must be
+                    submitted in order to launch your trucking business.
                   </p>
                 </div>
               </div>
@@ -202,9 +250,20 @@ const StartTruckingCompany = () => {
                   How to Start A Trucking Business
                 </h3>
                 <p className="mb-4">
-                  Although starting your own trucking business may first appear challenging, there are long-term financial benefits and room for growth. It takes a little time, skill, and patience to apply for a permit.
+                  Although starting your own trucking business may first appear
+                  challenging, there are long-term financial benefits and room
+                  for growth. It takes a little time, skill, and patience to
+                  apply for a permit.
                 </p>
-                <button className="bg-white text-orange-600 px-6 py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-200 flex items-center gap-2">
+                <button
+                  onClick={() => {
+                    const ctaSection = document.getElementById("cta-form");
+                    if (ctaSection) {
+                      ctaSection.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
+                  className="bg-white text-orange-600 px-6 py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-200 flex items-center gap-2"
+                >
                   Learn More
                   <ArrowRight className="w-5 h-5" />
                 </button>
@@ -219,14 +278,20 @@ const StartTruckingCompany = () => {
               className="space-y-8"
             >
               <div className="bg-white rounded-2xl p-8 shadow-xl">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Key Questions to Consider</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                  Key Questions to Consider
+                </h3>
                 <div className="space-y-4">
                   {keyQuestions.map((question, index) => (
                     <div key={index} className="flex items-start space-x-3">
                       <div className="w-6 h-6 bg-gradient-to-r from-orange-500 to-red-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                        <span className="text-white text-xs font-bold">{index + 1}</span>
+                        <span className="text-white text-xs font-bold">
+                          {index + 1}
+                        </span>
                       </div>
-                      <span className="text-gray-700 leading-relaxed">{question}</span>
+                      <span className="text-gray-700 leading-relaxed">
+                        {question}
+                      </span>
                     </div>
                   ))}
                 </div>
@@ -236,9 +301,13 @@ const StartTruckingCompany = () => {
                 <div className="flex items-start gap-3 mb-4">
                   <AlertTriangle className="w-6 h-6 text-yellow-300 flex-shrink-0 mt-1" />
                   <div>
-                    <h4 className="font-bold text-lg mb-2">IMPORTANT Information</h4>
+                    <h4 className="font-bold text-lg mb-2">
+                      IMPORTANT Information
+                    </h4>
                     <p>
-                      Your social security number should not be used as your Federal ID number. Using your social security number might lead to identity theft.
+                      Your social security number should not be used as your
+                      Federal ID number. Using your social security number might
+                      lead to identity theft.
                     </p>
                   </div>
                 </div>
@@ -254,17 +323,31 @@ const StartTruckingCompany = () => {
             className="mt-16 bg-white rounded-2xl p-8 shadow-xl"
           >
             <div className="text-center mb-8">
-              <h3 className="text-3xl font-bold text-gray-900 mb-4">Complete Compliance Solution</h3>
+              <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                Complete Compliance Solution
+              </h3>
               <p className="text-gray-600 text-lg">
-                There will be many concerns and risks associated with starting a trucking business if the appropriate licenses, plates, or cab cards are not obtained.
+                There will be many concerns and risks associated with starting a
+                trucking business if the appropriate licenses, plates, or cab
+                cards are not obtained.
               </p>
             </div>
-            
+
             <div className="bg-gradient-to-r from-orange-500 to-red-600 rounded-xl p-6 text-white text-center">
               <p className="text-lg font-semibold mb-4">
-                Allow the knowledgeable personnel at Tap Truck Permit & Services to fully comply with state and federal regulations for your tractor-trailer.
+                Allow the knowledgeable personnel at Tap Truck Permit & Services
+                to fully comply with state and federal regulations for your
+                tractor-trailer.
               </p>
-              <button className="bg-white text-orange-600 px-8 py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-200">
+              <button
+                onClick={() => {
+                  const ctaSection = document.getElementById("cta-form");
+                  if (ctaSection) {
+                    ctaSection.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
+                className="bg-white text-orange-600 px-8 py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-200"
+              >
                 Get Started Now
               </button>
             </div>
@@ -291,7 +374,7 @@ const StartTruckingCompany = () => {
         .delay-300 { animation-delay: 0.3s; }
       `}</style>
     </div>
-  )
-}
+  );
+};
 
-export default StartTruckingCompany
+export default StartTruckingCompany;

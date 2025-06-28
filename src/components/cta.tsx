@@ -67,7 +67,7 @@ const CTA = () => {
 
   return (
     <section
-      id="contact"
+      id="cta-form"
       className="py-24 bg-gradient-to-r from-orange-500 to-orange-600 relative overflow-hidden"
     >
       {/* Decorative Shapes */}
@@ -91,7 +91,7 @@ const CTA = () => {
             <div className="text-white">
               <h3 className="text-2xl font-bold mb-6">Ready to get started?</h3>
               <p className="text-lg mb-8 text-orange-50">
-                Join over 5000 truckers who trust Tapservices for their permit
+                Join over 1000+ truckers who trust Tapservices INC for their permit
                 needs. Get started today with a free consultation.
               </p>
               <Button className="bg-white text-orange-500 hover:bg-orange-50 hover:text-orange-600 px-8 py-6 text-lg rounded-xl shadow-lg transition-all duration-300 font-semibold">

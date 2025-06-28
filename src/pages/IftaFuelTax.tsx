@@ -1,6 +1,6 @@
-"use client"
-import { useState, useEffect } from "react"
-import { motion } from "framer-motion"
+"use client";
+import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import {
   ArrowRight,
   CheckCircle,
@@ -12,34 +12,34 @@ import {
   Truck,
   DollarSign,
   MapPin,
-} from "lucide-react"
-import Navbar from "@/components/navbar"
-import CTA from "@/components/cta"
-import Footer from "@/components/footer"
+} from "lucide-react";
+import Navbar from "@/components/navbar";
+import CTA from "@/components/cta";
+import Footer from "@/components/footer";
 
 const IftaFuelTax = () => {
-  const [showScrollTop, setShowScrollTop] = useState(false)
+  const [showScrollTop, setShowScrollTop] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setShowScrollTop(window.scrollY > 400)
-    }
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+      setShowScrollTop(window.scrollY > 400);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const eligibilityCriteria = [
     "Vehicles with two axles and GVW over 26,000 lbs",
     "Vehicles with three or more axles (regardless of weight)",
     "Combined GVW exceeding 26,000 lbs",
-  ]
+  ];
 
   const additionalPermits = [
     "Oregon permits",
     "Kentucky KYU and spirits transport",
     "VIN verification",
     "ARB & CARB compliance certificates",
-  ]
+  ];
 
   const serviceHighlights = [
     {
@@ -50,7 +50,8 @@ const IftaFuelTax = () => {
     {
       icon: Calculator,
       title: "Tax Calculations",
-      description: "Accurate fuel use calculations across multiple jurisdictions",
+      description:
+        "Accurate fuel use calculations across multiple jurisdictions",
     },
     {
       icon: Calendar,
@@ -62,7 +63,7 @@ const IftaFuelTax = () => {
       title: "Permit Management",
       description: "Complete IFTA decal and permit acquisition support",
     },
-  ]
+  ];
 
   return (
     <div className="min-h-screen overflow-hidden">
@@ -100,7 +101,10 @@ const IftaFuelTax = () => {
               transition={{ delay: 0.3, duration: 0.8 }}
               className="text-5xl lg:text-7xl font-extrabold text-white leading-tight drop-shadow-2xl"
             >
-              IFTA <span className="text-orange-500 px-3 py-2 rounded-xl shadow-lg">Fuel Tax</span>
+              IFTA{" "}
+              <span className="text-orange-500 px-3 py-2 rounded-xl shadow-lg">
+                Fuel Tax
+              </span>
             </motion.h1>
 
             <motion.p
@@ -109,7 +113,8 @@ const IftaFuelTax = () => {
               transition={{ delay: 0.5, duration: 1 }}
               className="text-white/85 text-xl relative z-10 drop-shadow-md max-w-2xl mx-auto"
             >
-              Meet the amazing team behind this project and find out more about how we work.
+              Meet the amazing team behind this project and find out more about
+              how we work.
             </motion.p>
 
             <motion.div
@@ -119,14 +124,32 @@ const IftaFuelTax = () => {
               className="flex flex-col sm:flex-row gap-4 justify-center relative z-10"
             >
               <motion.button
-                whileHover={{ scale: 1.08, boxShadow: "0 20px 40px rgba(0,0,0,0.3)" }}
+                whileHover={{
+                  scale: 1.08,
+                  boxShadow: "0 20px 40px rgba(0,0,0,0.3)",
+                }}
+                onClick={() => {
+                  const ctaSection = document.getElementById("cta-form");
+                  if (ctaSection) {
+                    ctaSection.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-white/90 backdrop-blur-md text-black font-bold px-8 py-4 rounded-xl shadow-2xl border border-white/50 hover:bg-white/95 transition-all duration-300"
               >
                 Get Started
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.08, backgroundColor: "rgba(255,255,255,0.15)" }}
+                whileHover={{
+                  scale: 1.08,
+                  backgroundColor: "rgba(255,255,255,0.15)",
+                }}
+                onClick={() => {
+                  const ctaSection = document.getElementById("cta-form");
+                  if (ctaSection) {
+                    ctaSection.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
                 whileTap={{ scale: 0.95 }}
                 className="border-2 border-white/60 bg-white/10 backdrop-blur-md text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/15 transition-all duration-300 shadow-lg flex items-center gap-2 justify-center"
               >
@@ -150,7 +173,9 @@ const IftaFuelTax = () => {
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 animate-fadeIn">IFTA Services</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 animate-fadeIn">
+              IFTA Services
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto animate-fadeIn delay-200">
               Comprehensive IFTA fuel tax management and compliance solutions.
             </p>
@@ -165,8 +190,12 @@ const IftaFuelTax = () => {
                     <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-xl flex items-center justify-center mx-auto mb-4">
                       <service.icon className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-2">{service.title}</h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">{service.description}</p>
+                    <h3 className="text-lg font-bold text-gray-900 mb-2">
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      {service.description}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -202,12 +231,16 @@ const IftaFuelTax = () => {
 
                 <div className="space-y-6 text-gray-700 leading-relaxed">
                   <p>
-                    The International Fuel Tax Agreement (IFTA) is a pact between U.S. states and Canadian provinces
-                    that simplifies reporting of fuel use by motor carriers operating across multiple jurisdictions.
+                    The International Fuel Tax Agreement (IFTA) is a pact
+                    between U.S. states and Canadian provinces that simplifies
+                    reporting of fuel use by motor carriers operating across
+                    multiple jurisdictions.
                   </p>
                   <p>
-                    It allows a carrier registered in one jurisdiction to report fuel use in all IFTA jurisdictions
-                    under a single license. It saves time, effort, and redundant paperwork across state lines.
+                    It allows a carrier registered in one jurisdiction to report
+                    fuel use in all IFTA jurisdictions under a single license.
+                    It saves time, effort, and redundant paperwork across state
+                    lines.
                   </p>
                 </div>
               </div>
@@ -218,8 +251,9 @@ const IftaFuelTax = () => {
                   How to Submit an IFTA Return
                 </h3>
                 <p className="mb-4">
-                  Quarterly IFTA Fuel Tax Returns must be submitted by licensed carriers. Accuracy and timeliness are
-                  crucial, and failing to file on time may lead to significant penalties.
+                  Quarterly IFTA Fuel Tax Returns must be submitted by licensed
+                  carriers. Accuracy and timeliness are crucial, and failing to
+                  file on time may lead to significant penalties.
                 </p>
 
                 <div className="space-y-3 mb-6">
@@ -233,7 +267,10 @@ const IftaFuelTax = () => {
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5" />
-                    <span>Expertise in trucking, tax rates, and compliance is critical</span>
+                    <span>
+                      Expertise in trucking, tax rates, and compliance is
+                      critical
+                    </span>
                   </div>
                 </div>
 
@@ -263,7 +300,9 @@ const IftaFuelTax = () => {
                       <div className="w-6 h-6 bg-gradient-to-r from-orange-500 to-red-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                         <CheckCircle className="w-4 h-4 text-white" />
                       </div>
-                      <span className="text-gray-700 leading-relaxed">{criteria}</span>
+                      <span className="text-gray-700 leading-relaxed">
+                        {criteria}
+                      </span>
                     </div>
                   ))}
                 </div>
@@ -279,10 +318,13 @@ const IftaFuelTax = () => {
                   <div className="flex items-start gap-3">
                     <AlertTriangle className="w-6 h-6 text-red-500 flex-shrink-0 mt-1" />
                     <div>
-                      <h4 className="font-bold text-red-800 mb-2">Important Warning</h4>
+                      <h4 className="font-bold text-red-800 mb-2">
+                        Important Warning
+                      </h4>
                       <p className="text-red-700">
-                        Failure to file within two months after the due date may result in suspension of your IFTA
-                        license and fines from the IRS.
+                        Failure to file within two months after the due date may
+                        result in suspension of your IFTA license and fines from
+                        the IRS.
                       </p>
                     </div>
                   </div>
@@ -294,7 +336,9 @@ const IftaFuelTax = () => {
                   <MapPin className="w-5 h-5 text-orange-500" />
                   Additional Permits
                 </h3>
-                <p className="text-gray-700 mb-4">We also assist with related truck permits including:</p>
+                <p className="text-gray-700 mb-4">
+                  We also assist with related truck permits including:
+                </p>
 
                 <div className="space-y-2">
                   {additionalPermits.map((permit, index) => (
@@ -316,17 +360,35 @@ const IftaFuelTax = () => {
             className="mt-16"
           >
             <div className="bg-gradient-to-r from-orange-500 to-red-600 rounded-3xl p-12 text-white text-center shadow-2xl">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Simplify Your IFTA Filings?</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Ready to Simplify Your IFTA Filings?
+              </h2>
               <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
-                Our team is here to simplify your IFTA filings and compliance. Get in touch today to avoid fines and
-                stay on the road!
+                Our team is here to simplify your IFTA filings and compliance.
+                Get in touch today to avoid fines and stay on the road!
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-white text-orange-600 px-8 py-4 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-200 flex items-center gap-2 justify-center">
+                <button
+                  onClick={() => {
+                    const ctaSection = document.getElementById("cta-form");
+                    if (ctaSection) {
+                      ctaSection.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
+                  className="bg-white text-orange-600 px-8 py-4 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-200 flex items-center gap-2 justify-center"
+                >
                   Get Started Today
                   <ArrowRight className="w-5 h-5" />
                 </button>
-                <button className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-orange-600 transition-all duration-200">
+                <button
+                  onClick={() => {
+                    const ctaSection = document.getElementById("cta-form");
+                    if (ctaSection) {
+                      ctaSection.scrollIntoView({ behavior: "smooth" });
+                    }
+                  }}
+                  className="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-orange-600 transition-all duration-200"
+                >
                   Learn More
                 </button>
               </div>
@@ -354,7 +416,7 @@ const IftaFuelTax = () => {
         .delay-300 { animation-delay: 0.3s; }
       `}</style>
     </div>
-  )
-}
+  );
+};
 
-export default IftaFuelTax
+export default IftaFuelTax;

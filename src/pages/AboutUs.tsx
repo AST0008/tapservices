@@ -1,6 +1,6 @@
-"use client"
-import { useState, useEffect, useRef } from "react"
-import { motion, AnimatePresence } from "framer-motion"
+"use client";
+import { useState, useEffect, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   ArrowRight,
   CheckCircle,
@@ -14,43 +14,51 @@ import {
   Building2,
   Shield,
   Clock,
-} from "lucide-react"
-import Navbar from "@/components/navbar"
-import CTA from "@/components/cta"
-import Footer from "@/components/footer"
+} from "lucide-react";
+import Navbar from "@/components/navbar";
+import CTA from "@/components/cta";
+import Footer from "@/components/footer";
 
 const AboutPage = () => {
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [showScrollTop, setShowScrollTop] = useState(false)
-  const [activeIndex, setActiveIndex] = useState(null)
-  const [activeSection, setActiveSection] = useState("history")
-  const [isTransitioning, setIsTransitioning] = useState(false)
-  const headerRef = useRef<HTMLElement>(null)
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [showScrollTop, setShowScrollTop] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(null);
+  const [activeSection, setActiveSection] = useState("history");
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const headerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-      setShowScrollTop(window.scrollY > 400)
+      setIsScrolled(window.scrollY > 50);
+      setShowScrollTop(window.scrollY > 400);
 
       if (headerRef.current) {
         if (window.scrollY > 50) {
-          headerRef.current.classList.add("backdrop-blur-xl", "shadow-2xl", "py-2")
-          headerRef.current.classList.remove("py-4")
+          headerRef.current.classList.add(
+            "backdrop-blur-xl",
+            "shadow-2xl",
+            "py-2"
+          );
+          headerRef.current.classList.remove("py-4");
         } else {
-          headerRef.current.classList.remove("backdrop-blur-xl", "shadow-2xl", "py-2")
-          headerRef.current.classList.add("py-4")
+          headerRef.current.classList.remove(
+            "backdrop-blur-xl",
+            "shadow-2xl",
+            "py-2"
+          );
+          headerRef.current.classList.add("py-4");
         }
       }
-    }
+    };
 
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
     show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-  }
+  };
 
   const faqs = [
     {
@@ -77,33 +85,36 @@ const AboutPage = () => {
       q: "How long are truck permits valid for?",
       a: "The validity period for truck permits varies depending on the type of permit and the state where it was issued. Some permits may be valid for a single trip or for a specific time period, while others may be valid for a longer period of time or until the vehicle's registration expires.",
     },
-  ]
+  ];
 
   const teamMembers = [
     {
       name: "Mr. Himanshu",
       role: "Founder & CEO",
-      description: "Leading the company with expertise in trucking regulations and business development.",
+      description:
+        "Leading the company with expertise in trucking regulations and business development.",
       icon: Crown,
     },
     {
-      name: "Rajesh Bharadwaj",
+      name: "Rajesh Bhardwaj",
       role: "Head Operations",
-      description: "Overseeing daily operations and ensuring seamless service delivery.",
+      description:
+        "Overseeing daily operations and ensuring seamless service delivery.",
       icon: Users,
     },
     {
       name: "Neeraj Singh",
-      role: "Branch Head",
+      role: " Head - Sales & Marketing",
       description: "Managing regional operations and client relationships.",
       icon: Building2,
     },
-  ]
+  ];
 
   const specialFeatures = [
     {
       title: "Trusted Franchise",
-      description: "A reputable franchise offering high-quality services across the board.",
+      description:
+        "A reputable franchise offering high-quality services across the board.",
       icon: Shield,
       isOrange: true,
     },
@@ -119,7 +130,7 @@ const AboutPage = () => {
       icon: Clock,
       isOrange: true,
     },
-  ]
+  ];
 
   const services = [
     "Manage Trucking Permits",
@@ -127,65 +138,74 @@ const AboutPage = () => {
     "DOT Audit Support",
     "DOT Clearinghouse",
     "Open New Trucking Company",
-    "Trailer Leasing Services",
-  ]
+  ];
 
   const sections = {
     history: {
       title: "Our Journey & Heritage",
       description:
-        "With his expertise in day-to-day knowledge of fuel tax reporting, trucker permits, business files, and authorities across the United States, Mr. Himanshu founded Tap Truck Permits & Services a few years ago. Tap Truck Permits & Services has helped over 5000 transport businesses in the US. We support owner-operators, small trucking companies, and larger fleets with everything they need to stay compliant and efficient.",
+        "With his expertise in day-to-day knowledge of fuel tax reporting, trucker permits, business files, and authorities across the United States, Mr. Himanshu founded Tap Truck Permits & Services a few years ago. Tap Truck Permits & Services has helped over 1000+ transport businesses in the US. We support owner-operators, small trucking companies, and larger fleets with everything they need to stay compliant and efficient.",
       features: [
         "Founded by Industry Expert Mr. Himanshu",
-        "Served Over 5000+ Transport Businesses",
+        "Served Over 1000+ Transport Businesses",
         "Comprehensive Compliance Solutions",
       ],
-      image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&h=400&fit=crop&crop=center",
+      image: "/trucks-hero3.jpg",
       icon: User,
     },
     mission: {
       title: "Our Mission & Purpose",
       description:
         "To empower trucking entrepreneurs by simplifying compliance, streamlining paperwork, and delivering personalized support - so they can focus on growing their business, not just managing it. We believe in making trucking regulations accessible and manageable for everyone.",
-      features: ["Simplifying Complex Regulations", "Personalized Business Support", "Empowering Growth & Success"],
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop&crop=center",
+      features: [
+        "Simplifying Complex Regulations",
+        "Personalized Business Support",
+        "Empowering Growth & Success",
+      ],
+      image:
+        "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop&crop=center",
       icon: Target,
     },
     vision: {
       title: "Our Vision for Tomorrow",
       description:
         "To become the most trusted partner for trucking businesses across the U.S., making compliance effortless and growth achievable — one permit at a time. We envision a future where every trucking business can operate with confidence and clarity.",
-      features: ["Leading Trusted Partnership", "Effortless Compliance Solutions", "Nationwide Growth Support"],
-      image: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&h=400&fit=crop&crop=center",
+      features: [
+        "Leading Trusted Partnership",
+        "Effortless Compliance Solutions",
+        "Nationwide Growth Support",
+      ],
+      image:
+        "https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&h=400&fit=crop&crop=center",
       icon: Eye,
     },
-  }
+  };
 
   const toggleIndex = (i) => {
-    setActiveIndex(activeIndex === i ? null : i)
-  }
+    setActiveIndex(activeIndex === i ? null : i);
+  };
 
   const handleSectionChange = (section) => {
-    if (section === activeSection) return
-    setIsTransitioning(true)
+    if (section === activeSection) return;
+    setIsTransitioning(true);
     setTimeout(() => {
-      setActiveSection(section)
-      setIsTransitioning(false)
-    }, 300)
-  }
+      setActiveSection(section);
+      setIsTransitioning(false);
+    }, 300);
+  };
 
   const answerVariants = {
     hidden: { opacity: 0, height: 0, transition: { duration: 0.3 } },
     visible: { opacity: 1, height: "auto", transition: { duration: 0.3 } },
-  }
+  };
 
   const arrowVariants = {
     collapsed: { rotate: 0 },
     expanded: { rotate: 180 },
-  }
+  };
 
-  const currentSection = sections[activeSection]
-  const IconComponent = currentSection.icon
+  const currentSection = sections[activeSection];
+  const IconComponent = currentSection.icon;
 
   return (
     <div className="min-h-screen overflow-hidden">
@@ -224,7 +244,10 @@ const AboutPage = () => {
               transition={{ delay: 0.3, duration: 0.8 }}
               className="text-5xl lg:text-7xl font-extrabold text-white leading-tight drop-shadow-2xl"
             >
-              About <span className="text-orange-500 px-3 py-2 rounded-xl shadow-lg">Tapservices</span>
+              About{" "}
+              <span className="text-orange-500 px-3 py-2 rounded-xl shadow-lg">
+                Tapservices
+              </span>
             </motion.h1>
 
             <motion.p
@@ -233,7 +256,8 @@ const AboutPage = () => {
               transition={{ delay: 0.5, duration: 1 }}
               className="text-white/85 text-xl relative z-10 drop-shadow-md max-w-2xl mx-auto"
             >
-              Empowering over 5000+ US transport businesses with fast, reliable, and professional trucking services.
+              Empowering over 1000+ US transport businesses with fast, reliable,
+              and professional trucking services.
             </motion.p>
 
             <motion.div
@@ -243,14 +267,26 @@ const AboutPage = () => {
               className="flex flex-col sm:flex-row gap-4 justify-center relative z-10"
             >
               <motion.button
-                whileHover={{ scale: 1.08, boxShadow: "0 20px 40px rgba(0,0,0,0.3)" }}
+                whileHover={{
+                  scale: 1.08,
+                  boxShadow: "0 20px 40px rgba(0,0,0,0.3)",
+                }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-white/90 backdrop-blur-md text-black font-bold px-8 py-4 rounded-xl shadow-2xl border border-white/50 hover:bg-white/95 transition-all duration-300"
+                onClick={() => {
+                  const ctaSection = document.getElementById("cta-form");
+                  if (ctaSection) {
+                    ctaSection.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
               >
                 Get Started
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.08, backgroundColor: "rgba(255,255,255,0.15)" }}
+                whileHover={{
+                  scale: 1.08,
+                  backgroundColor: "rgba(255,255,255,0.15)",
+                }}
                 whileTap={{ scale: 0.95 }}
                 className="border-2 border-white/60 bg-white/10 backdrop-blur-md text-white font-semibold px-8 py-4 rounded-xl hover:bg-white/15 transition-all duration-300 shadow-lg flex items-center gap-2 justify-center"
               >
@@ -319,40 +355,64 @@ const AboutPage = () => {
 
               <div className="grid lg:grid-cols-2 gap-8 items-center p-8 md:p-12">
                 <div
-                  className={`transition-all duration-500 ${isTransitioning ? "opacity-0 translate-x-8" : "opacity-100 translate-x-0"}`}
+                  className={`transition-all duration-500 ${
+                    isTransitioning
+                      ? "opacity-0 translate-x-8"
+                      : "opacity-100 translate-x-0"
+                  }`}
                 >
                   <div className="flex items-center mb-6">
                     <div className="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center mr-4 backdrop-blur-sm">
                       <IconComponent className="w-7 h-7 text-white" />
                     </div>
-                    <h3 className="text-3xl md:text-4xl font-bold text-white">{currentSection.title}</h3>
+                    <h3 className="text-3xl md:text-4xl font-bold text-white">
+                      {currentSection.title}
+                    </h3>
                   </div>
 
-                  <p className="text-white/90 text-lg leading-relaxed mb-8">{currentSection.description}</p>
+                  <p className="text-white/90 text-lg leading-relaxed mb-8">
+                    {currentSection.description}
+                  </p>
 
                   <div className="space-y-4 mb-8">
                     {currentSection.features.map((feature, index) => (
                       <div
                         key={index}
                         className={`flex items-center transition-all duration-500 ${
-                          isTransitioning ? "opacity-0 translate-x-4" : "opacity-100 translate-x-0"
+                          isTransitioning
+                            ? "opacity-0 translate-x-4"
+                            : "opacity-100 translate-x-0"
                         }`}
                         style={{ transitionDelay: `${index * 100}ms` }}
                       >
                         <CheckCircle className="w-6 h-6 text-white mr-4 flex-shrink-0" />
-                        <span className="text-white font-medium">{feature}</span>
+                        <span className="text-white font-medium">
+                          {feature}
+                        </span>
                       </div>
                     ))}
                   </div>
 
-                  <button className="inline-flex items-center px-8 py-4 bg-white text-orange-600 font-semibold rounded-xl hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-lg group">
+                  <button
+                    onClick={() => {
+                      const ctaSection = document.getElementById("cta-form");
+                      if (ctaSection) {
+                        ctaSection.scrollIntoView({ behavior: "smooth" });
+                      }
+                    }}
+                    className="inline-flex items-center px-8 py-4 bg-white text-orange-600 font-semibold rounded-xl hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-lg group"
+                  >
                     Read More
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                   </button>
                 </div>
 
                 <div
-                  className={`relative transition-all duration-500 ${isTransitioning ? "opacity-0 translate-x-8 scale-95" : "opacity-100 translate-x-0 scale-100"}`}
+                  className={`relative transition-all duration-500 ${
+                    isTransitioning
+                      ? "opacity-0 translate-x-8 scale-95"
+                      : "opacity-100 translate-x-0 scale-100"
+                  }`}
                 >
                   <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                     <img
@@ -385,9 +445,12 @@ const AboutPage = () => {
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 animate-fadeIn">What Makes Us Special</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 animate-fadeIn">
+              What Makes Us Special
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto animate-fadeIn delay-200">
-              Discover the unique qualities that set us apart in the trucking services industry.
+              Discover the unique qualities that set us apart in the trucking
+              services industry.
             </p>
           </div>
 
@@ -396,26 +459,47 @@ const AboutPage = () => {
               <div key={index} className="animate-fadeInUp delay-300">
                 <div className="relative group h-full">
                   <div
-                    className={`absolute -inset-0.5 ${feature.isOrange ? "bg-gradient-to-r from-orange-500 to-red-600" : ""} rounded-[2rem] blur opacity-20 group-hover:opacity-40 transition-all duration-500`}
+                    className={`absolute -inset-0.5 ${
+                      feature.isOrange
+                        ? "bg-gradient-to-r from-orange-500 to-red-600"
+                        : ""
+                    } rounded-[2rem] blur opacity-20 group-hover:opacity-40 transition-all duration-500`}
                   ></div>
                   <div
-                    className={`relative ${feature.isOrange ? "bg-gradient-to-br from-orange-500 to-red-600 text-white" : "bg-white text-gray-900"} rounded-[1.5rem] p-8 h-full shadow-xl hover:shadow-2xl transition-all duration-300 group-hover:-translate-y-1 flex flex-col justify-between`}
+                    className={`relative ${
+                      feature.isOrange
+                        ? "bg-gradient-to-br from-orange-500 to-red-600 text-white"
+                        : "bg-white text-gray-900"
+                    } rounded-[1.5rem] p-8 h-full shadow-xl hover:shadow-2xl transition-all duration-300 group-hover:-translate-y-1 flex flex-col justify-between`}
                   >
                     <div>
                       <div
-                        className={`w-12 h-12 ${feature.isOrange ? "bg-white/20" : "bg-orange-500/20"} rounded-xl flex items-center justify-center mb-6 backdrop-blur-sm`}
+                        className={`w-12 h-12 ${
+                          feature.isOrange ? "bg-white/20" : "bg-orange-500/20"
+                        } rounded-xl flex items-center justify-center mb-6 backdrop-blur-sm`}
                       >
-                        <feature.icon className={`w-6 h-6 ${feature.isOrange ? "text-white" : "text-orange-500"}`} />
+                        <feature.icon
+                          className={`w-6 h-6 ${
+                            feature.isOrange ? "text-white" : "text-orange-500"
+                          }`}
+                        />
                       </div>
-                      <h3 className="text-2xl md:text-3xl font-bold mb-4">{feature.title}</h3>
+                      <h3 className="text-2xl md:text-3xl font-bold mb-4">
+                        {feature.title}
+                      </h3>
                       <p
-                        className={`${feature.isOrange ? "text-white/90" : "text-gray-600"} mb-6 text-md leading-relaxed`}
+                        className={`${
+                          feature.isOrange ? "text-white/90" : "text-gray-600"
+                        } mb-6 text-md leading-relaxed`}
                       >
                         {feature.description}
                       </p>
                     </div>
                     <button
-                      className={`inline-flex items-center ${feature.isOrange ? "text-white" : "text-orange-600"} font-medium hover:translate-x-1 transition-transform duration-300 group/btn`}
+                      onClick={() => CTA()}
+                      className={`inline-flex items-center ${
+                        feature.isOrange ? "text-white" : "text-orange-600"
+                      } font-medium hover:translate-x-1 transition-transform duration-300 group/btn`}
                     >
                       Learn More
                       <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform duration-300" />
@@ -441,11 +525,15 @@ const AboutPage = () => {
               Why Choose Tapservices
             </h2>
             <p className="text-xl text-gray-600 mb-8">
-              Comprehensive trucking solutions designed to keep your business compliant and thriving.
+              Comprehensive trucking solutions designed to keep your business
+              compliant and thriving.
             </p>
             <ul className="space-y-4">
               {services.map((item, i) => (
-                <li key={i} className="flex items-start space-x-3 text-gray-700 text-lg">
+                <li
+                  key={i}
+                  className="flex items-start space-x-3 text-gray-700 text-lg"
+                >
                   <div className="w-6 h-6 bg-gradient-to-r from-orange-500 to-red-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <CheckCircle className="w-4 h-4 text-white" />
                   </div>
@@ -486,7 +574,9 @@ const AboutPage = () => {
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 animate-fadeIn">Meet Our Team</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 animate-fadeIn">
+              Meet Our Team
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto animate-fadeIn delay-200">
               The dedicated professionals behind our success story.
             </p>
@@ -501,9 +591,15 @@ const AboutPage = () => {
                     <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
                       <member.icon className="w-8 h-8 text-white" />
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">{member.name}</h3>
-                    <p className="text-orange-600 font-semibold mb-4">{member.role}</p>
-                    <p className="text-gray-600 leading-relaxed">{member.description}</p>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                      {member.name}
+                    </h3>
+                    <p className="text-orange-600 font-semibold mb-4">
+                      {member.role}
+                    </p>
+                    <p className="text-gray-600 leading-relaxed">
+                      {member.description}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -519,8 +615,12 @@ const AboutPage = () => {
 
         <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
-            <p className="text-xl text-gray-600">Get answers to the most common questions about our services.</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-xl text-gray-600">
+              Get answers to the most common questions about our services.
+            </p>
           </div>
 
           <div className="space-y-6">
@@ -532,7 +632,7 @@ const AboutPage = () => {
                 role="button"
                 tabIndex={0}
                 onKeyDown={(e) => {
-                  if (e.key === "Enter" || e.key === " ") toggleIndex(i)
+                  if (e.key === "Enter" || e.key === " ") toggleIndex(i);
                 }}
               >
                 <div className="flex justify-between items-center font-semibold text-lg text-gray-800">
@@ -637,7 +737,7 @@ const AboutPage = () => {
         }
       `}</style>
     </div>
-  )
-}
+  );
+};
 
-export default AboutPage
+export default AboutPage;

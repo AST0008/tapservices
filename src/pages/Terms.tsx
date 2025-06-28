@@ -23,7 +23,7 @@ const Terms = () => {
               <section>
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">2. Services Description</h2>
                 <p>
-                  Tapservices provides trucking permit services, DOT clearinghouse support, audit assistance, and related compliance services. 
+                  Tapservices INC provides trucking permit services, DOT clearinghouse support, audit assistance, and related compliance services. 
                   We help trucking companies and independent operators maintain compliance with federal and state regulations.
                 </p>
               </section>
@@ -47,7 +47,7 @@ const Terms = () => {
               <section>
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">5. Limitation of Liability</h2>
                 <p>
-                  Tapservices shall not be liable for any indirect, incidental, special, consequential, or punitive damages, 
+                  Tapservices INC shall not be liable for any indirect, incidental, special, consequential, or punitive damages, 
                   including without limitation, loss of profits, data, use, goodwill, or other intangible losses.
                 </p>
               </section>
