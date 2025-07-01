@@ -33,7 +33,7 @@ const CTA = () => {
       "https://script.google.com/macros/s/AKfycbw1HvfYd2fMP5tTvAgmF9Yr8PW6t592YFupKOmbiFaKOEwaDtTuIQw_M1sBZf9Z-dt1dA/exec";
 
     try {
-      await fetch("https://sheetdb.io/api/v1/mzxhmjoh04avh", {
+      await fetch("https://sheetdb.io/api/v1/ae6ppn6xsy8xe", {
         method: "POST",
         body: JSON.stringify({ data: [formData] }),
         headers: {
