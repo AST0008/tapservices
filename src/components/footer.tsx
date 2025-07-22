@@ -84,7 +84,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="#about"
+                  href="/#about"
                   className="hover:text-orange-500 transition-colors"
                 >
                   About Us
@@ -92,7 +92,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#services"
+                  href="/#services"
                   className="hover:text-orange-500 transition-colors"
                 >
                   Services
@@ -100,7 +100,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#news"
+                  href="/#news"
                   className="hover:text-orange-500 transition-colors"
                 >
                   News
@@ -108,7 +108,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#contact"
+                  href="/#cta"
                   className="hover:text-orange-500 transition-colors"
                 >
                   Contact Us
@@ -138,27 +138,27 @@ const Footer = () => {
             <h3 className="text-lg font-semibold text-white mb-4">Services</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="hover:text-orange-500 transition-colors">
+                <a href="/manage-trucking-permits" className="hover:text-orange-500 transition-colors">
                   Trucking Permits
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-orange-500 transition-colors">
+                <a href="/dot-drug-and-alcohol-testing" className="hover:text-orange-500 transition-colors">
                   DOT Clearinghouse
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-orange-500 transition-colors">
+                <a href="/dot-audit-support" className="hover:text-orange-500 transition-colors">
                   DOT Audit Support
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-orange-500 transition-colors">
-                  UCR Registration
+                <a href="/dot-clearinghouse" className="hover:text-orange-500 transition-colors">
+                 DOT Clearing House
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-orange-500 transition-colors">
+                <a href="/ifta-fuel-tax-return" className="hover:text-orange-500 transition-colors">
                   IFTA Reporting
                 </a>
               </li>

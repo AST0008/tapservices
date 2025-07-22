@@ -96,8 +96,8 @@ const AboutPage = () => {
       icon: Crown,
     },
     {
-      name: "Rajesh Bhardwaj",
-      role: "Head Operations",
+      name: "Mr Rajesh Bhardwaj",
+      role: "Co - Founder",
       description:
         "Overseeing daily operations and ensuring seamless service delivery.",
       icon: Users,
