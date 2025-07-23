@@ -1,10 +1,35 @@
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import { useEffect, useState } from "react";
 
 const Privacy = () => {
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "auto" }); // Instant scroll on initial render
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 400);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <div className="min-h-screen">
-    <Navbar />
+      {showScrollTop && (
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-gray-800 to-black text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300"
+          aria-label="Scroll to top"
+        >
+          ↑
+        </button>
+      )}
+
+      <Navbar />
       <main className="pt-20">
         <div className="container px-4 mx-auto py-16">
           <div className="max-w-4xl mx-auto">
