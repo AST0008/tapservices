@@ -129,10 +129,10 @@ const Terms = () => {
                 </p>
                 <div className="bg-gray-50 p-4 rounded-lg mt-4">
                   <p>
-                    <strong>Email:</strong> info@tapservices.com
+                    <strong>Email:</strong> 1tap@tapservicesusa.com
                   </p>
                   <p>
-                    <strong>Phone:</strong> 1-800-PERMITS (1-800-737-6487)
+                    <strong>Phone:</strong> +1 559-721-4467
                   </p>
                   <p>
                     <strong>Address:</strong> 6163 Alluvial Ave, Fresno, CA
