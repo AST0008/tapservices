@@ -89,21 +89,21 @@ const AboutPage = () => {
 
   const teamMembers = [
     {
-      name: "Mr. Himanshu",
+      name: "Mr HIMANSHU",
       role: "Founder & CEO",
       description:
         "Leading the company with expertise in trucking regulations and business development.",
       icon: Crown,
     },
     {
-      name: "Mr Rajesh Bhardwaj",
+      name: "Mr RAJESH BHARDWAJ",
       role: "Co - Founder",
       description:
         "Overseeing daily operations and ensuring seamless service delivery.",
       icon: Users,
     },
     {
-      name: "Neeraj Singh",
+      name: "MR NEERAJ SINGH",
       role: " Head - Sales & Marketing",
       description: "Managing regional operations and client relationships.",
       icon: Building2,
