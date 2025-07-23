@@ -235,25 +235,25 @@ const BecoLandingPage: React.FC = () => {
       name: "Yash Kandhoul",
       image: "/client1.jpg",
       rating: 5,
-      text: "Working with this team was a fantastic experience. They delivered high-quality results ahead of schedule and were incredibly responsive to our needs.",
+      text: "“TAP Services Inc. took care of my MC number, IFTA registration, and BOC-3 filing — all within days. As a new owner-operator, I had no idea where to start. These guys made it easy, fast, and affordable.”",
     },
     {
       name: "Mohan Singh",
       image: "/client2.jpg",
       rating: 5,
-      text: "From planning to execution, everything was seamless. Their attention to detail and user-centric design approach impressed our entire team.",
+      text: "Their team doesn’t just handle paperwork — they guide you through every step. No hidden fees, no confusion, just real people helping you get compliant. Highly recommend for all truckers.",
     },
     {
       name: "Pardeep",
       image: "/client3.jpg",
       rating: 5,
-      text: "Professional, innovative, and reliable. We saw measurable improvements in our workflow and customer satisfaction after launch.",
+      text: "Best part? I didn’t have to chase them. They followed up, reminded me of deadlines, and got everything done on time. TAP Services is the support system every trucker needs.",
     },
     {
       name: "Sourav Saini",
       image: "/client4.jpg",
       rating: 5,
-      text: "They exceeded our expectations in every way. The final product was sleek, efficient, and perfectly aligned with our brand vision.",
+      text: "I switched from a big agency to TAP Services, and the difference is night and day. Transparent pricing, friendly support, and quick processing. I’m stress-free now.",
     },
   ];
 
@@ -945,13 +945,13 @@ const BecoLandingPage: React.FC = () => {
             <ServiceCard
               image="/poster1.jpg"
               title="Mastery Service Package"
-              price="Only $349"
+              price="Only $375"
               services={secondServices}
             />
             <ServiceCard
               image="/poster3.jpg"
               title="Mastery Service Package"
-              price="Only $349"
+              price="Only $449"
               services={thirdServices}
             />
           </div>
